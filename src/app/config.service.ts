@@ -6,28 +6,24 @@ import { IRecipe } from './recipe.js';
 
 
 @Injectable()
-export class ConfigService
-{
+export class ConfigService {
     private Categories: string[];
     private Recipes: IRecipe[];
     private categories = categories;
     private recipes = recipes;
 
-    constructor(private _http: HttpClient) {}
+    constructor(private _http: HttpClient) { }
 
-    public load()
-    {
-      this.Categories = (this.categories   as  any).default.categories;
+    public load() {
+        this.Categories = (this.categories as any).default.categories;
         this.Recipes = (this.recipes as any).default.recipes;
     }
 
-    public getCategories()
-    {
+    public getCategories() {
         return this.Categories;
     }
 
-    public getRecipes()
-    {
+    public getRecipes() {
         return this.Recipes;
     }
 }
