@@ -105,5 +105,7 @@
       }
     }
   },
-  "defaultProject": "DietsRecipes"
+  "cli": {
+    "analytics": false
+  }
 }

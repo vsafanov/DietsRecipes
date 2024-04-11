@@ -1,6 +1,6 @@
 ﻿import { Component, ViewChild, ElementRef, Renderer2, Input } from '@angular/core';
 import { IRecipe } from "./recipe";
-import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators, FormControl } from '@angular/forms';
 import { RecipeDataService } from './recipe-data.service';
 
 
@@ -15,12 +15,12 @@ export class RecipeDetailsComponent
 
     public selectedRecipe: IRecipe;
 
-    public form : FormGroup;
+    public form : UntypedFormGroup;
 
     @ViewChild('lgModal',{static: false}) modal: any;
     // @ViewChild('description') desc: ElementRef;
 
-    constructor(public formBuilder: FormBuilder,private recipeService: RecipeDataService) { }
+    constructor(public formBuilder: UntypedFormBuilder,private recipeService: RecipeDataService) { }
 
     ngOnInit()
     {
