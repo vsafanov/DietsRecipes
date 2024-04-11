@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { RecipesListComponent } from "./recipes-list.component";
 import { RecipeDetailsComponent } from "./recipe-details.component";
 import { ConfigService } from "./config.service";
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 @NgModule({
   imports: [
@@ -19,7 +19,7 @@ import { ConfigService } from "./config.service";
     ReactiveFormsModule,
     HttpClientModule,
     HttpClientJsonpModule,
-    // NgbModule
+    NgbModule
   ],
   declarations: [
     AppComponent,
